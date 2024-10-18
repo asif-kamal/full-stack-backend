@@ -1,5 +1,8 @@
 package com.smallcodingproject.full_stack_backend.controller;
 
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,5 +25,8 @@ public class UserController {
         return userRepository.save(newUser);
     }
 
-    
+    @GetMapping()
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
 }
