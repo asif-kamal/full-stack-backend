@@ -2,6 +2,7 @@ package com.smallcodingproject.full_stack_backend.controller;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,6 +14,7 @@ import com.smallcodingproject.full_stack_backend.repository.UserRepository;
 
 import lombok.AllArgsConstructor;
 
+@CrossOrigin("http://localhost:3000")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/users")
